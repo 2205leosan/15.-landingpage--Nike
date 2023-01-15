@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 100px 0;
+  background: linear-gradient(to bottom, #e625a4, #FE7170);
+}
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+section header .logo img {
+  max-width: 100px;
+}
+section header .toggle {
+  width: 30px;
+  height: 30px;
+  background: url(../img/menu.png);
+  background-size: 30px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section .content {
+  position: relative;
+  width: 50%;
+  margin-top: 40px;
+}
+section .content .imgbox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section .content .imgbox img {
+  max-width: 100%;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+section .content .text {
+  max-width: 700px;
+  margin-top: 20px;
+}
+section .content .text h2 {
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+section .content .text p {
+  color: #fff;
+}
+section .content .text a {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+section::before {
+  content: "ZOOMX";
+  font-size: 20vw;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.0666666667);
+  display: flex;
+  font-weight: 900;
+  padding-top: 20vh;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.redes {
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+  right: 100px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.redes li {
+  list-style: none;
+}
+.redes li a {
+  display: block;
+  color: #fff;
+  font-size: 1em;
+}
+.redes li a:hover {
+  transform: scale(1.5);
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px 40px;
+  }
+  section {
+    padding: 40px 40px;
+    overflow: hidden;
+  }
+  section::before {
+    font-size: 20vh;
+    left: 50%;
+    transform: translateX(-30%);
+    color: rgba(255, 255, 255, 0.1);
+    transition: 1s ease-in-out;
+  }
+  .content {
+    margin-top: 120px;
+  }
+  .content .imgbox {
+    margin-top: 65px;
+  }
+  .content .text .btn {
+    margin-top: 10px;
+  }
+  .redes {
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 15px;
+    bottom: 10px;
+    right: inherit;
+  }
+}
+@-webkit-keyframes animate {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}/*# sourceMappingURL=style.css.map */
